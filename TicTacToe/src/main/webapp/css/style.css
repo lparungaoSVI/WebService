@@ -102,6 +102,12 @@ body {
     height: 50px;
 }
 
+#inputUID {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+}
+
 /*Game*/
 section {
     text-align: center;
@@ -126,7 +132,12 @@ section {
 
 .game--title {
     font-size: 65px;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 10px 0px;
+    color: #A9BEC8;
+}
+
+.UIDPlayer {
+    margin: 0px 0px 10px 0px;
     color: #A9BEC8;
 }
 
@@ -140,7 +151,7 @@ section {
 #subtitleRow {
     padding: 0px;
     display: flex;
-    margin-bottom: 20px;
+    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -180,24 +191,115 @@ section {
 .game-button {
     display: inline;
     background-color: #F2B138;
-    width: 145px;
-    height: 50px;
-    font-size: 22px;
+    width: 100px;
+    height: 36px;
+    font-size: 16px;
     color: #1A2B33;
 }
 
 /*Game*/
 
+/*History Modal*/
+.modal-history {
+    position: fixed;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 100vh;
+    display: block; /* Initially hide the modal */
+}
+
+.modal-history h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Add some space between the title and close button */
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.modal-history .close-button {
+    position: absolute;
+    top: 15px;
+    right:15px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.overlay-history {
+    background: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+    overflow-y: auto;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+/*Game History Modal*/
+.modal-game-history {
+    position: fixed;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 100vh;
+    display: block; /* Initially hide the modal */
+}
+
+.modal-game-history h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Add some space between the title and close button */
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.modal-game-history .close-button {
+    position: absolute;
+    top: 15px;
+    right:15px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.overlay-game-history {
+    background: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+    overflow-y: auto;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+
 /* Extra Small Devices (phones) */
 @media screen and (max-width: 575px) {
     .game--status {
         font-size: 35px;
-    }
-
-    .game-button {
-        width: 120px;
-        height: 40px;
-        font-size: 20px;
     }
 
 }
@@ -260,11 +362,6 @@ section {
         font-size: 18px;
     }
 
-    .game-button {
-        width: 120px;
-        height: 30px;
-        font-size: 18px;
-    }
 }
 
 
@@ -296,11 +393,6 @@ section {
         font-size: 18px;
     }
 
-    .game-button {
-        width: 120px;
-        height: 30px;
-        font-size: 18px;
-    }
 }
 
 /* Medium Devices (tablets, small laptops) */
@@ -330,12 +422,6 @@ section {
     }
 
     .game--subtitle {
-        font-size: 20px;
-    }
-
-    .game-button {
-        width: 120px;
-        height: 35px;
         font-size: 20px;
     }
 
@@ -371,11 +457,7 @@ section {
         font-size: 25px;
     }
 
-    .game-button {
-        width: 120px;
-        height: 40px;
-        font-size: 20px;
-    }
+
 }
 
 /* Extra Large Devices (large desktops) */

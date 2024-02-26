@@ -1,0 +1,2 @@
+Room Code: 123, Game UID: 8effd7fe-40f8-44c6-ab41-aad80715085e, Player UID: 8893ba52-f96b-4dbd-acf6-e892746a093f, Symbol: X, Location: 0, Date: 2024-02-26 13:22:26
+Room Code: 123, Game UID: 8effd7fe-40f8-44c6-ab41-aad80715085e, Player UID: 12972354-3ab5-4be8-92e6-0b465b5efb5e, Symbol: O, Location: 1, Date: 2024-02-26 13:22:27
